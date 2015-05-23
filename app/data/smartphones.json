@@ -1,0 +1,57 @@
+[
+
+  {
+    "id": 1,
+    "code": "motorola-xoom-with-wi-fi",
+    "image": "motorola-xoom-with-wi-fi.0.jpg",
+    "name": "Motorola XOOM\u2122 with Wi-Fi",
+    "sku": "GDN-0011",
+    "description": "The Next, Next Generation\nExperience the future with Motorola XOOM with Wi-Fi, the world's first tablet powered by Android 3.0 (Honeycomb).",
+    "price": 249.99
+  },
+  {
+    "id": 2,
+    "code": "motorola-xoom",
+    "image": "motorola-xoom.0.jpg",
+    "name": "Motorola XOOM\u2122",
+    "sku": "GDN-0023",
+    "description": "The Next, Next Generation\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb).",
+    "price": 139.99
+  },
+  {
+    "id": 3,
+    "code": "motorola-atrix-4g",
+    "image": "motorola-atrix-4g.0.jpg",
+    "name": "MOTOROLA ATRIX\u2122 4G",
+    "sku": "TBX-0048",
+    "description": "MOTOROLA ATRIX 4G the world's most powerful smartphone.",
+    "price": 179.99
+  },
+  {
+    "id": 4,
+    "code": "dell-streak-7",
+    "image": "dell-streak-7.0.jpg",
+    "name": "Dell Streak 7",
+    "sku": "TBX-0022",
+    "description": "Introducing Dell\u2122 Streak 7. Share photos, videos and movies together. It\u2019s small enough to carry around, big enough to gather around.",
+    "price": 129.99
+  },
+  {
+    "id": 5,
+    "code": "samsung-gem",
+    "image": "samsung-gem.0.jpg",
+    "name": "Samsung Gem\u2122",
+    "sku": "TBX-0048",
+    "description": "The Samsung Gem\u2122 brings you everything that you would expect and more from a touch display smart phone \u2013 more apps, more features and a more affordable price.",
+    "price": 119.99
+  },
+  {
+    "id": 6,
+    "code": "dell-venue",
+    "image": "dell-venue.0.jpg",
+    "name": "Dell Venue",
+    "sku": "GMG-0042",
+    "description": "The Dell Venue; Your Personal Express Lane to Everything.",
+    "price": 99.99
+  }
+]

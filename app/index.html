@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/brand/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>Macy's Shopping Cart</title>
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.css">
+
+    <link href="css/animations.css" rel="stylesheet"/>
+    <link href="css/app.css" rel="stylesheet"/>
+<!--    <base href="/">-->
+</head>
+
+<body class="ng-cloak" ng-app="shoppingCart">
+<header ng-include="'template/core/header.html'" style="opacity:1.0" class="navbar navbar-fixed-top navbar-inverse"></header>
+<div id="main" class="content">
+    <wait-spinner></wait-spinner>
+    <div ui-view ng-animate-children></div>
+</div>
+<footer class="text-center clearfix">
+    <div class="box text-center">
+        <p>
+            &copy; 2015 XYZ Company, Inc.
+        </p>
+    </div>
+</footer>
+
+<!-- Library Scripts -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/re-tree/re-tree.js"></script>
+<script src="bower_components/ng-device-detector/ng-device-detector.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/ui-utils/ui-utils.js"></script>
+<script src="bower_components/ngcart/dist/ngCart.js"></script>
+
+<!-- Application Script -->
+<script src="app.js"></script>
+<script src="routes.js"></script>
+
+<!-- Services -->
+<script src="common/services/common.services.js"></script>
+<script src="common/services/productResource.js"></script>
+<script src="common/services/productResourceMock.js"></script>
+<script src="common/services/productService.js"></script>
+<script src="common/services/events.js"></script>
+<script src="common/services/messaging.js"></script>
+<script src="common/filters/priceFilter.js"></script>
+<script src="common/directives/waitSpinner.js"></script>
+<script src="common/directives/imgOnLoad.js"></script>
+
+<!-- Controllers -->
+<script src="partials/base/baseCtrl.js"></script>
+<script src="partials/header/headerCtrl.js"></script>
+<script src="partials/home/homeCtrl.js"></script>
+<script src="partials/products/productListCtrl.js"></script>
+<script src="partials/products/productDetailCtrl.js"></script>
+<script src="partials/cart/cartCtrl.js"></script>
+
+</body>
+
+</html>
+
