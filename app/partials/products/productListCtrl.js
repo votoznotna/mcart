@@ -13,9 +13,6 @@
 
         $rootScope.selectPriceBar = true;
 
-        ngCart.setShipping(10.99);
-        ngCart.setTaxRate(13);
-
         //messaging.publish(events.message._SERVER_REQUEST_STARTED_);
         productResource.getProducts(function(data){
 

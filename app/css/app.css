@@ -280,6 +280,15 @@ mark {
 .cart .table-striped > tbody > tr:nth-of-type(odd) {
   bacground-color: #fff;
 }
+.cart table tbody,
+.cart table th {
+  border-bottom: 1px solid #000 !important;
+}
+.cart table td,
+.cart table tr {
+  border-top: none !important;
+  border-bottom: none !important;
+}
 .btn-primary {
   background-color: #003466;
   border: none !important;

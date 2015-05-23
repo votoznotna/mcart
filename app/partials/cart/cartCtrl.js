@@ -13,6 +13,9 @@
 
         $scope.size = ngCart.getTotalItems();
 
+        ngCart.setShipping(10.99);
+        ngCart.setTaxRate(13);
+
         $scope.$on('ngCart:itemRemoved', function(){
             $scope.size = ngCart.getTotalItems();
         });
@@ -27,15 +30,6 @@
             item_number:'item_number',
             currency_code:'USD'
         }};
-
-        $scope.showCart = function(){
-
-            $log.info ('---Total Cost:---');
-            $log.info (ngCart.totalCost());
-            $log.info ('---Items in Cart:---');
-            $log.info (ngCart.getItems());
-
-        }
 
     }
 }(angular.module("shoppingCart")));
