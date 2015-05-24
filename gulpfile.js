@@ -22,7 +22,7 @@ var path = require("path");
 var root = "app/";
 
 // file paths
-var prodHtml = "production/index.html";
+var prodHtml = "app/production/index.html";
 var srcHtml = [
     root + "home/**/*.html",
     root + "partials/**/*.html",
@@ -215,21 +215,29 @@ function compileJsAndMaybeHtmlNgCart(source, destination, concatName, minify, sh
 */
 
 
-//a server, for convenience
-gulp.task("server", function() {
+//development server for debugging
+gulp.task("dev", function() {
+    connect.server({
+        port: 4000,
+        root: "./app"
+    });
+});
+
+//production server
+gulp.task("prod", function() {
     connect.server({
         port: 3000,
         root: "./dist"
     });
 });
 
-//gulp.task("e2e-test", ["server"], function(done) {
-//    exec("protractor protractor.conf.js", function(err, stdout) {
-//        console.log(stdout);
-//        connect.serverClose();
-//        done();
-//    });
-//});
+gulp.task("e2e-test", ["server"], function(done) {
+    exec("protractor protractor.conf.js", function(err, stdout) {
+        console.log(stdout);
+        connect.serverClose();
+        done();
+    });
+});
 
 gulp.task("unit-test", function(done) {
     return karma.start({

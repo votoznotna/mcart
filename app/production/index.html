@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/brand/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>Macy's Shopping Cart</title>
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" type="text/css" href="vendor/vendor.css" />
+    <link rel="stylesheet" type="text/css" href="application.css" />
+
+</head>
+
+<body class="ng-cloak" ng-app="shoppingCart">
+<header ng-include="'template/core/header.html'" style="opacity:1.0" class="navbar navbar-fixed-top navbar-inverse"></header>
+<div class="content">
+    <div ui-view ng-animate-children></div>
+</div>
+<footer class="text-center clearfix">
+    <div class="box text-center">
+        <p>
+            &copy; 2015 XYZ Company, Inc.
+        </p>
+    </div>
+</footer>
+
+<script src="vendor/vendor.js"></script>
+<script src="application.js"></script>
+
+</body>
+
+</html>

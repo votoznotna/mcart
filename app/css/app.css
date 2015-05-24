@@ -6,9 +6,9 @@ body {
   padding-bottom: 30px;
 }
 form {
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
   color: #e5dede;
   font-size: 16px;
   padding: 0 10px 20px;
@@ -222,14 +222,23 @@ mark {
 .products .thumbnail img {
   padding: 5px 0 10px 0;
 }
+#sortByPrice,
 #priceBar .btn-primary {
   background-color: #fff;
   color: #c00;
+  border-color: #fff;
 }
 #priceBar {
   position: relative;
-  padding: 8px 15px;
+  padding: 9px 15px;
   height: 40px;
+}
+#sortByPrice {
+  font-size: 16px;
+  padding-top: 6px;
+  margin-top: 8px;
+  margin-left: -5px;
+  height: 32px;
 }
 #priceBar ul {
   margin-left: 15px;
@@ -251,6 +260,9 @@ mark {
 }
 .thumbnail {
   padding: 5px 10px 10px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
   border-color: transparent !important;
 }
 .thumbnail h4 {
@@ -299,9 +311,9 @@ mark {
 .cart .items {
   border: 1px solid #facccc;
   background-color: #fff;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
   padding: 18px 5px 0 5px;
   margin: 10px 10px 20px 10px;
 }

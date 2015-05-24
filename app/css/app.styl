@@ -10,9 +10,10 @@ default-background-color = #F8DBDB //#E5DEDE // #F5CCCC
 blueColor = #003466 //#0039A6
 blueColorDisabled = #809AB2//#99B0DB
 panelBackgroundColor = #F0B2B2
-greenColor=#3a1
-whiteColor=#FFFFFF
-blackColor=#000000
+greenColor = #3a1
+whiteColor = #FFFFFF
+blackColor = #000000
+borderRadius = 7px
 
 a
   color blueColor
@@ -22,7 +23,7 @@ body
   padding-bottom 30px
 
 form
-  border-radius 2px
+  border-radius borderRadius
   color default-color
   font-size 16px
   padding 0 10px 20px
@@ -68,7 +69,7 @@ form
     padding-left 5px
 
 .panel-body
-  border-radius 7px
+  border-radius borderRadius
 
 .products .panel-body
   padding 30px 15px 15px 15px
@@ -80,7 +81,7 @@ form
 
 .panel
   padding 0
-  border-radius 7px
+  border-radius borderRadius
   background-color transparent !important
   border none !important
   margin-bottom 20px
@@ -238,14 +239,22 @@ mark
 .products .thumbnail img
   padding 5px 0 10px 0
 
-#priceBar .btn-primary
+#sortByPrice, #priceBar .btn-primary
   background-color whiteColor
   color redColor
+  border-color whiteColor
 
 #priceBar
   position relative
-  padding 8px 15px
+  padding 9px 15px
   height 40px
+
+#sortByPrice
+  font-size 16px
+  padding-top 6px
+  margin-top 8px
+  margin-left -5px
+  height 32px
 
 #priceBar ul
   margin-left 15px
@@ -267,6 +276,7 @@ mark
 
 .thumbnail
   padding 5px 10px 10px;
+  border-radius borderRadius
   border-color transparent !important
 
 .thumbnail h4
@@ -306,9 +316,6 @@ mark
     border-top none !important
     border-bottom none !important
 
-
-
-
 .btn-primary
   background-color blueColor
   border none !important
@@ -319,7 +326,7 @@ mark
 .cart .items
   border 1px solid #FACCCC //E5DEDE // #F0B2B2
   background-color #FFFFFF
-  border-radius 2px
+  border-radius borderRadius
   padding 18px 5px 0 5px;
   margin 10px 10px 20px 10px
 

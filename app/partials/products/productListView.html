@@ -11,7 +11,7 @@
     </p>-->
         <div class="panel-body">
 
-            <div ng-repeat="item in products  | orderBy:'price' | priceFilter:extPrice">
+            <div ng-repeat="item in products  | orderBy:sortByPrice | priceFilter:extPrice">
                 <div class="col-sm-6 col-md-4 col-lg-4" >
                     <div class="thumbnail">
 
