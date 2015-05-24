@@ -50,10 +50,10 @@
 
         $scope.priceOptions = [
             defaultPriceOption,
-            {id: 50, name: priceOptionPre + '50'},
             {id: 100, name: priceOptionPre + '100'},
             {id: 300, name: priceOptionPre + '300'},
-            {id: 600, name: priceOptionPre + '600'}
+            {id: 500, name: priceOptionPre + '500'},
+            {id: 1000, name: priceOptionPre + '1000'}
         ];
 
 

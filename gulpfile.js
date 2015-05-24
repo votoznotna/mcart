@@ -61,7 +61,6 @@ var vendorSrcJs = [
     root + "bower_components/bootstrap/dist/js/bootstrap.js"
 ];
 var vendorSrcCss = [
-
     root + "bower_components/bootstrap/dist/css/bootstrap.css",
     root + "bower_components/font-awesome/css/font-awesome.css",
     root + "bower_components/animate.css/animate.css"

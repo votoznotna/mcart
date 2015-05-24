@@ -17,7 +17,7 @@
     .run (['$rootScope', '$state', function($rootScope, $state){
         $rootScope.$state = $state;
     }])
-    .constant('descLength', 200)
+    .constant('descLength', 150)
     .config(function ($provide) {
         $provide.decorator("$exceptionHandler",
             ["$delegate",
