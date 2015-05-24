@@ -14,7 +14,7 @@
                 var loader = null;
 
                 if(imgLoadingIcon) {
-                    loader = angular.element("<img src='" + imgLoadingIcon + "' style='visibility:visible; margin: 50px auto'>");
+                    loader = angular.element("<img src='" + imgLoadingIcon + "' style='visibility:visible; margin: 50px auto' alt='Loading...'>");
                     element.after(loader);
                 }
 
