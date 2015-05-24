@@ -121,12 +121,12 @@
                 },
                 {
                     "id": 13,
-                    "code": "EN520",
-                    "image": "1009442_fpx.tif.jpg",
-                    "name": "De'Longhi EN520 Lattissima Plus Single Serve Espresso Maker",
-                    "description": "A brilliant brew ready in an instant! Simply pick your favorite Nespresso pod, press a button and relax into the incredible flavors of gourmet coffee right at home. An included milk container tops each drink off with a burst of steamed or frothed milk. Model EN520SL.",
-                    "origPrice": 599.99,
-                    "price": 399.99
+                    "code": "1536173",
+                    "image": "2674200_fpx.tif.jpg",
+                    "name": "Nespresso Inissia Espresso Maker",
+                    "description": "The pod bunch. Just pop in a capsule & let this compact morning maker do the rest. With a 19-bar high-pressure pump & programmable features, this espresso machine masters everything from machiattos to lungos & beyond, while taking up minimal space on your countertop.",
+                    "origPrice": 189.99,
+                    "price": 129.99
                 },
                 {
                     "id": 14,
