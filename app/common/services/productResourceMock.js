@@ -158,11 +158,11 @@
                 {
                     "id": 17,
                     "code": "C60D60US",
-                    "image": "1717868_fpx.tif.jpg",
+                    "image": "940420_fpx.tif.jpg",
                     "name": "Nespresso C60/D60US Espresso Maker, Pixie Titan",
                     "description": "Small size, big flavor! A compact espresso maker that packs as much of a punch as your favorite morning pick-me-up. Heating up in less than 30 seconds, this powerhouse brings knock-out flavor and cafe-convenience into your home. 1-year warranty from date of purchase and registration. Model C60D60US.",
-                    "origPrice": 299.99,
-                    "price": 199.99
+                    "origPrice": 329.99,
+                    "price": 229.99
                 },
                 {
                     "id": 18,
