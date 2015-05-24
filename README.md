@@ -12,7 +12,7 @@ Build and usage:
 04. Run >npm install -g karma
 05. Run >npm install -g protractor 
 06. Run >npm install -g bower
-07. Go To project's root folder
+07. Go to project's root folder
 08. Run >npm install
 09. Run >bower install
 10. Run >gulp build
