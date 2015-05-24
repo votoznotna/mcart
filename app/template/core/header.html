@@ -30,7 +30,7 @@
                             </li>
                         </ul>
                     </div>
-                    <span id="sortByPrice" type="button" class="glyphicon glyphicon-sort-by-attributes btn btn-sm btn-primary" ng-click="cnangePriceSort()" ></span>
+                    <span id="sortByPrice" type="button" ng-class="{'glyphicon-sort-by-attributes': priceSortAsc(), 'glyphicon-sort-by-attributes-alt': !priceSortAsc()}" class="glyphicon btn btn-sm btn-primary" ng-click="cnangePriceSort()" ></span>
                 </li>
 
 
