@@ -382,3 +382,6 @@ mark {
 .odd-img-responsive {
   width: 100%;
 }
+img {
+  color: #000 !important;
+}
