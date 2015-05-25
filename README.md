@@ -1,4 +1,4 @@
-Mockup of Shopping Cart made in Angular.
+Prototype of Shopping Cart made in Angular.
 
 Demo:
 ====
