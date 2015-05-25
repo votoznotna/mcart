@@ -7,7 +7,7 @@
                         <div class="thumbnail">
                             <a ui-sref="productDetail({productId: item.id})">
                                 <h4>{{item.name}}</h4>
-                                <img style="display: none" class="center-block odd-img-responsive" ng-src="images/products/{{item.image}}" imageonload="images/loaders/loading_icon_64.gif" alt="Loading...">
+                                <img style="display: none" class="center-block odd-img-responsive" ng-src="images/products/{{item.image}}" imageonload="images/loaders/loading_icon_64.gif" alt="Processing...">
                                 <p class="text-justify" ng-bind-html="item.description | html"></p>
                             </a>
                             <h3 class="origPrice">Orig. {{item.origPrice | currency}}</h3>

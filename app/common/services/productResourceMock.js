@@ -142,7 +142,7 @@
                     "code": "DLX1050B",
                     "image": "1572317_fpx.tif.jpg",
                     "name": "Black & Decker DLX1050B Coffee Maker, 12 Cup Programmable",
-                    "description": "A true self starter. Totally programmable & totally a coffee connoisseur, this morning maker steps up to every cup with gourmet brilliance. From automatically choosing the optimal brewing temp to extracting even more flavor from grinds to Quick Touch™ programming for custom cups to the Sneak-A-Cup® feature, this coffee maker is not your average joe. Model DLX1050B.",
+                    "description": "A true self starter. Totally programmable & totally a coffee connoisseur, this morning maker steps up to every cup with gourmet brilliance. From automatically choosing the optimal brewing temp to extracting even more flavor from grinds to Quick Touch\u2122 programming for custom cups to the Sneak-A-Cup\u24C7 feature, this coffee maker is not your average joe. Model DLX1050B.",
                     "origPrice": 39.99,
                     "price": 29.99
                 },
