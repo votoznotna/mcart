@@ -19,5 +19,5 @@ Build and usage:
 11. Run for production(port 3000) >gulp prod
 12. Run for development(port 4000) >gulp dev
 13. Go to any browser and navigate to http://localhost:3000|4000
-14. Go to http://ipadpeek.com/ to see ipad/iphones outputs.
+14. Go to http://ipadpeek.com/ to see how it looks on the ipad
 
