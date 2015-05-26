@@ -22,7 +22,8 @@ var path = require("path");
 var root = "app/";
 
 // file paths
-var prodHtml = "app/production/index.html";
+var prodPath = root + "production/"
+var prodHtml = prodPath + "index.html";
 var srcHtml = [
     root + "home/**/*.html",
     root + "partials/**/*.html",
@@ -30,6 +31,7 @@ var srcHtml = [
 ];
 var srcCss = root + "css/*.css";
 var srcJs = [
+    root + "production/*.js",
     root + "app.js",
     root + "routes.js",
     root + "common/filters/**/*.js",
@@ -38,10 +40,10 @@ var srcJs = [
     root + "partials/**/*.js"
 ];
 
-/*var srcNgCartJs = [
-    root + "template/!**!/!*.html",
+var srcNgCartJs = [
+    root + "template/ngCart/*.html",
     root + "bower_components/ngcart/dist/ngCart.js"
-];*/
+];
 
 var distDirectory = "dist";
 var vendorDistDirectory = distDirectory + "/vendor";
@@ -57,7 +59,7 @@ var vendorSrcJs = [
     root + "bower_components/re-tree/re-tree.js",
     root + "bower_components/ng-device-detector/ng-device-detector.js",
     root + "bower_components/ui-utils/ui-utils.js",
-    root + "bower_components/ngcart/dist/ngCart.js",
+    //root + "bower_components/ngcart/dist/ngCart.js",
     root + "bower_components/bootstrap/dist/js/bootstrap.js"
 ];
 var vendorSrcCss = [
@@ -84,7 +86,7 @@ gulp.task("watch", ["build"], function() {
     //gulp.watch(dataDirectory, ["data"]);
 });
 
-gulp.task("build", ["css", "js", "html", "img", "vendor", "font"]);
+gulp.task("build", ["css", "ngcart", "js", "html", "img", "vendor", "font"]);
 
 gulp.task("clean", function() {
     return gulp.src(distDirectory, {read: false})
@@ -115,17 +117,17 @@ gulp.task("js", function() {
     );
 });
 
-/*gulp.task("ngcart", function() {
+gulp.task("ngcart", function() {
     return eventStream.merge(
         compileJsAndMaybeHtmlNgCart(
             srcNgCartJs,
-            distDirectory,
+            prodPath,
             "ngcart.js",
             false,
             true
         )
     );
-})*/;
+});
 
 gulp.task("img", function() {
     return gulp.src(imgDirectory, {base: root})
@@ -195,7 +197,6 @@ function compileJsAndMaybeHtml(source, destination, concatName, minify, showErro
         .pipe(gulp.dest(destination));
 }
 
-/*
 function compileJsAndMaybeHtmlNgCart(source, destination, concatName, minify, showErrors) {
     return gulp.src(source)
         .pipe(gulpif(/[.]html$/, minifyHTML({
@@ -205,13 +206,12 @@ function compileJsAndMaybeHtmlNgCart(source, destination, concatName, minify, sh
         })))
         .pipe(gulpif(/[.]html$/, html2js({
             moduleName: "ngcart.templates",
-            prefix: ""
+            prefix: "template/ngCart/"
         })))
         .pipe(gulpif(minify, uglify({mangle: false})))
         .pipe(concat(concatName))
         .pipe(gulp.dest(destination));
 }
-*/
 
 
 //development server for debugging

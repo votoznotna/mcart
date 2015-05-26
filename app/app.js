@@ -12,6 +12,7 @@
             "ngSanitize",
             "ng.deviceDetector",
             "productResourceMock",
+            "ngcart.templates",
             "ngCart"])
 
     .run (['$rootScope', '$state', function($rootScope, $state){
