@@ -176,7 +176,7 @@
 
             ]
 
-        var productUrl = "/api/products"
+        var productUrl = "/api/products";
 
         $httpBackend.whenGET(productUrl).respond(products);
 

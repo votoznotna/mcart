@@ -14,6 +14,7 @@ var newer = require("gulp-newer");
 var gulpif = require("gulp-if");
 var eventStream = require("event-stream");
 var connect = require("gulp-connect");
+var pushState = require('connect-pushstate');
 var html2js = require("gulp-ng-html2js");
 var exec = require('child_process').exec;
 var karma = require("karma").server;
@@ -217,6 +218,11 @@ function compileJsAndMaybeHtmlNgCart(source, destination, concatName, minify, sh
 //development server for debugging
 gulp.task("dev", function() {
     connect.server({
+        middleware: function (connect, options) {
+            return [
+                pushState()
+            ];
+        },
         port: 4000,
         root: "./app"
     });
@@ -225,6 +231,11 @@ gulp.task("dev", function() {
 //production server
 gulp.task("prod", function() {
     connect.server({
+        middleware: function (connect, options) {
+            return [
+                pushState()
+            ];
+        },
         port: 3000,
         root: "./dist"
     });

@@ -6,18 +6,12 @@
 
     module.config(["$locationProvider", "$stateProvider","$urlRouterProvider",
         function ($locationProvider, $stateProvider, $urlRouterProvider) {
-            /*                $locationProvider.html5Mode({
-             enabled: true,
-             requireBase: false
-             });*/
+/*            $locationProvider.html5Mode({
+                enabled: true,
+                requireBase: false
+            });*/
+            $locationProvider.hashPrefix('!');
             $urlRouterProvider.otherwise('/');
-
-            /*
-             $locationProvider.html5Mode({
-             enabled: true,
-             requireBase: false
-             });
-             }*/
 
             $stateProvider
                 .state("home", {
@@ -36,7 +30,7 @@
                     controller:"CartCtrl"
                 })
                 .state("productDetail", {
-                    url: "/products/:productId",
+                    url: "/product/:productId",
                     templateUrl: "partials/products/productDetailView.html",
                     controller: "ProductDetailCtrl",
                     resolve: {
