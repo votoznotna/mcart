@@ -316,6 +316,9 @@ mark {
   border-top: none !important;
   border-bottom: none !important;
 }
+.cart .table-responsive {
+  border-color: #000;
+}
 .btn-primary {
   background-color: #003466;
   border: none !important;
