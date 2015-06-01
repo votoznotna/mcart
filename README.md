@@ -1,11 +1,8 @@
 # Prototype of Shopping Cart made in Angular #
 
-## Demo: ## 
-===========
-https://mcart.herokuapp.com.
+## Demo: https://mcart.herokuapp.com.
 
-## Build and usage: ##
-======================
+## Build and usage:
 * Unzip project on your location
 * Install Node.js from http://nodejs.org/
 * Run >npm install -g gulp
