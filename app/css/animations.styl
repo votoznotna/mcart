@@ -1,3 +1,5 @@
+@import 'mixins'
+
 ng-include.ng-enter, [ng-include].ng-enter, ng-view.ng-enter, [ng-view].ng-enter,
 ui-view.ng-enter, [ui-view].ng-enter
   opacity 0
@@ -22,4 +24,26 @@ ui-view.ng-enter-active, [ui-view].ng-enter-active
 
 ng\:form
   display block
+
+.item.ng-enter,
+.item.ng-leave
+  animation-duration(900ms)
+
+.item.ng-enter
+  animation-name(slide-in)
+
+.item.ng-leave
+  animation-name(slide-out)
+
+.item.ng-enter-stagger,
+.item.ng-leave-stagger
+  animation-delay(200ms)
+  animation-duration(0s)
+
+.item.ng-move
+  opacity 0
+  transition opacity 1s
+
+.item.ng-move-active
+  opacity 1
 

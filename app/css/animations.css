@@ -5,6 +5,10 @@ ng-view.ng-enter,
 ui-view.ng-enter,
 [ui-view].ng-enter {
   opacity: 0;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
   transition: opacity 1s;
 }
 ng-include.ng-enter-active,
@@ -16,6 +20,10 @@ ui-view.ng-enter-active,
   opacity: 1;
 }
 .ng-animate-block-transitions {
+  -webkit-transition: 0s all !important;
+  -moz-transition: 0s all !important;
+  -ms-transition: 0s all !important;
+  -o-transition: 0s all !important;
   transition: 0s all !important;
   -webkit-transition: 0s all !important;
 }
@@ -38,4 +46,35 @@ ui-view.ng-enter-active,
 }
 ng:form {
   display: block;
+}
+.item.ng-enter,
+.item.ng-leave {
+  -webkit-animation-duration: 900ms;
+  animation-duration: 900ms;
+}
+.item.ng-enter {
+  -webkit-animation-name: slide-in;
+  animation-name: slide-in;
+}
+.item.ng-leave {
+  -webkit-animation-name: slide-out;
+  animation-name: slide-out;
+}
+.item.ng-enter-stagger,
+.item.ng-leave-stagger {
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
+  -webkit-animation-duration: 0s;
+  animation-duration: 0s;
+}
+.item.ng-move {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.item.ng-move-active {
+  opacity: 1;
 }
