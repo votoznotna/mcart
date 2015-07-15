@@ -44,6 +44,8 @@
                 $rootScope.sortByPrice = priceAsc;
             }
             sortElement.addClass($scope.sortByPriceIcon);
+            $rootScope.$broadcast('sortUpdate');
+
         };
 
 /*        $scope.$watch('selectedPriceOption', function(newValue, oldValue) {

@@ -18,6 +18,7 @@
 
             });
             $scope.initProducts = angular.copy($scope.products);
+            $scope.filterUpdate();
         });
 
 
@@ -25,20 +26,26 @@
             $scope.products.splice(0,  $scope.products.length);
         };
 
-        $scope.$on('priceUpdate', function() {
+        $scope.filterUpdate = function(){
             messaging.publish(events.message._SERVER_REQUEST_STARTED_);
-            $scope.$evalAsync(function($scope){
-                $scope.removeProducts();
+            $scope.removeProducts();
+            $scope.$safeApply();
+            $scope.$$postDigest(function(){
+                $scope.products = $filter('priceFilter')($scope.initProducts,$rootScope.extPrice);
+                $scope.products = $filter('orderBy')($scope.products,$rootScope.sortByPrice);
                 $scope.$safeApply();
                 $scope.$$postDigest(function(){
-                    $scope.products = $filter('priceFilter')($scope.initProducts,$rootScope.extPrice);
-                    $scope.$safeApply();
-                    $scope.$$postDigest(function(){
-                    $scope.finishLoopRendering();
-                    });
+                    messaging.publish(events.message._SERVER_REQUEST_ENDED_);
                 });
             });
+        };
 
+        $scope.$on('priceUpdate', function() {
+            $scope.filterUpdate();
+        });
+
+        $scope.$on('sortUpdate', function() {
+            $scope.filterUpdate();
         });
 
         $scope.descTruncate = function (value) {
