@@ -1,22 +1,18 @@
 /**
  * Created by User on 5/22/2015.
  */
-
 (function (module) {
     "use strict";
 
     module.controller('HeaderCtrl',
-        [ '$rootScope', '$scope', '$controller', HeaderCtrl ]);
+        [ '$rootScope', '$scope', 'messaging', 'events',  HeaderCtrl ]);
 
-
-
-    function HeaderCtrl($rootScope, $scope, $controller) {
+    function HeaderCtrl($rootScope, $scope, messaging, events) {
 
         var defaultPriceOption = {id: 0, name: 'All prices'};
 
         var sortElement = angular.element(document.querySelector("#sortByPrice"));
 
-        //var arrowDesc = '\u2191',  arrowAsc = '\u2193';
         var arrowDescClass = 'glyphicon-sort-by-attributes-alt',  arrowAscClass = 'glyphicon-sort-by-attributes';
         var priceAsc = 'price', priceDesc = '-price';
 
@@ -24,9 +20,12 @@
         $scope.sortByPriceIcon = arrowAscClass;  //arrow down
 
         $scope.selectedPriceOption = defaultPriceOption;
+        $rootScope.extPrice =  defaultPriceOption.id;
 
         $scope.setPriceOption = function(option) {
             $scope.selectedPriceOption = option;
+            $rootScope.extPrice =  option.id;
+            $rootScope.$broadcast('priceUpdate');
         };
 
         $scope.priceSortAsc = function(){
@@ -47,9 +46,11 @@
             sortElement.addClass($scope.sortByPriceIcon);
         };
 
-        $scope.$watch('selectedPriceOption', function(newValue, oldValue) {
-            $rootScope.extPrice =  $scope.selectedPriceOption.id
-        });
+/*        $scope.$watch('selectedPriceOption', function(newValue, oldValue) {
+            $rootScope.extPrice =  $scope.selectedPriceOption.id;
+            //$rootScope.$broadcast('price')
+            //messaging.publish(events.message._SERVER_REQUEST_STARTED_);
+        });*/
 
         var priceOptionPre = "Less than $";
 

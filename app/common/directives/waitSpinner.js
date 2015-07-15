@@ -12,17 +12,16 @@
             templateUrl: 'template/waitSpinner/waitSpinner.html',
             link: function(scope, element, attrs, fn) {
                 element.hide();
-
                 var startRequestHandler = function () {
                     // got the request start notification, show the element
                     element.show();
-                    angular.element('#main').css('opacity', '0.5');
+                    angular.element('#main').css({'opacity': '0.5'} );
                 };
 
                 var endRequestHandler = function() {
                     // got the request start notification, show the element
                     element.hide();
-                    angular.element('#main').css('opacity', '1.0');
+                    angular.element('#main').css({'opacity': '1.0'});
                 };
 
                 scope.startHandle = messaging.subscribe(events.message._SERVER_REQUEST_STARTED_, startRequestHandler);

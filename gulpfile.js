@@ -51,6 +51,7 @@ var vendorDistDirectory = distDirectory + "/vendor";
 var vendorSrcJs = [
     root + "bower_components/jquery/dist/jquery.js",
     root + "bower_components/angular/angular.js",
+    root + "bower_components/angular-safeapply/safe-apply.js",
     root + "bower_components/angular-resource/angular-resource.js",
     root + "bower_components/angular-animate/angular-animate.js",
     root + "bower_components/angular-sanitize/angular-sanitize.js",

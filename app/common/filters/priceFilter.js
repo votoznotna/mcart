@@ -6,7 +6,7 @@
     "use strict";
 
     module.filter('priceFilter', function () {
-        return function (items, search) {
+         function priceFilter(items, search) {
 
             if(!items || items.length === 0) return items;
             if(search === 0) return items;
@@ -21,7 +21,12 @@
             }
 
             return filtered;
-    };
+         };
+
+        priceFilter.$stateful = true;
+
+        return priceFilter;
+
 });
 
 }(angular.module("shoppingCart")));

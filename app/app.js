@@ -10,6 +10,7 @@
             "ngAnimate",
             "ui.bootstrap",
             "ngSanitize",
+            "SafeApply",
             "ng.deviceDetector",
             "productResourceMock",
             "ngcart.templates",
@@ -19,7 +20,7 @@
         $rootScope.$state = $state;
     }])
     .constant('descLength', 150)
-    .config(function ($provide) {
+    .config(function ($provide, $httpProvider) {
         $provide.decorator("$exceptionHandler",
             ["$delegate",
                 function ($delegate) {
@@ -30,9 +31,13 @@
                         alert(exception.message);
                     };
                 }]);
+
+            $httpProvider.interceptors.push('progressInterceptor');
+
     })
     .run(['$state', '$rootScope', '$location', 'messaging', 'events',
-            function($state, $rootScope, $location, messaging, events) {
+        function($state, $rootScope, $location, messaging, events) {
+
         //Check when routing starts
         $rootScope.$on( '$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {
             $rootScope.selectPriceBar = false;
@@ -44,6 +49,21 @@
             return $sce.trustAsHtml(text);
         };
     }])
+    .factory('progressInterceptor', ['messaging', 'events',
+        function(messaging, events) {
+        var interceptor = {
+            request: function(config) {
+                messaging.publish(events.message._SERVER_REQUEST_STARTED_);
+                return config;
+            },
+            response: function(response) {
+                messaging.publish(events.message._SERVER_REQUEST_ENDED_);
+                return response;
+            }
+        };
+        return interceptor;
+    }]);
+
 
     angular.element(document).ready(function() {
         //Fixing facebook bug with redirect
