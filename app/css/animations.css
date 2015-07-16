@@ -47,65 +47,19 @@ ui-view.ng-enter-active,
 ng:form {
   display: block;
 }
-@-webkit-keyframes slide-in {
-  0% {
-    transform: translate3d(-100%, 0, 0);
-    margin-bottom: -97px;
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadeItem {
+  from {
+    opacity: 0;
   }
-  60% {
-    transform: translate3d(3%, 0, 0);
-  }
-  83% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    margin-bottom: 15px;
+  to {
+    opacity: 1;
   }
 }
-@-webkit-keyframes slide-out {
-  0% {
-    transform: translate3d(0, 0, 0);
-    margin-bottom: 15px;
-  }
-  23% {
-    transform: translate3d(3%, 0, 0);
-  }
-  83% {
-    transform: translate3d(-100%, 0, 0);
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0);
-    margin-bottom: -97px;
-  }
-}
-.item.ng-enter,
-.item.ng-leave {
-  -webkit-animation-duration: 900ms;
-  animation-duration: 900ms;
-}
-/*.item.ng-enter
-  animation-name(slide-in)
-
-.item.ng-leave
-  animation-name(slide-out)*/
-.item.ng-enter-stagger,
-.item.ng-leave-stagger {
-  -webkit-animation-delay: 200ms;
-  animation-delay: 200ms;
-  -webkit-animation-duration: 0s;
-  animation-duration: 0s;
-}
-.item.ng-move {
-  opacity: 0;
-  -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -ms-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s;
-}
-.item.ng-move-active {
-  opacity: 1;
+/* Standard syntax */
+.flexListItem {
+  -webkit-animation: fadeItem 0.5s linear;
+  animation: fadeItem 0.5s linear;
 }
 .dropdown-menu.ng-enter,
 .dropdown-menu.ng-leave {
@@ -123,131 +77,35 @@ ng:form {
 .dropdown-menu.ng-enter {
   opacity: 0;
 }
-@-moz-keyframes slide-in {
-  0% {
-    transform: translate3d(-100%, 0, 0);
-    margin-bottom: -97px;
+@-moz-keyframes fadeItem {
+  from {
+    opacity: 0;
   }
-  60% {
-    transform: translate3d(3%, 0, 0);
-  }
-  83% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    margin-bottom: 15px;
+  to {
+    opacity: 1;
   }
 }
-@-webkit-keyframes slide-in {
-  0% {
-    transform: translate3d(-100%, 0, 0);
-    margin-bottom: -97px;
+@-webkit-keyframes fadeItem {
+  from {
+    opacity: 0;
   }
-  60% {
-    transform: translate3d(3%, 0, 0);
-  }
-  83% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    margin-bottom: 15px;
+  to {
+    opacity: 1;
   }
 }
-@-o-keyframes slide-in {
-  0% {
-    transform: translate3d(-100%, 0, 0);
-    margin-bottom: -97px;
+@-o-keyframes fadeItem {
+  from {
+    opacity: 0;
   }
-  60% {
-    transform: translate3d(3%, 0, 0);
-  }
-  83% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    margin-bottom: 15px;
+  to {
+    opacity: 1;
   }
 }
-@keyframes slide-in {
-  0% {
-    transform: translate3d(-100%, 0, 0);
-    margin-bottom: -97px;
+@keyframes fadeItem {
+  from {
+    opacity: 0;
   }
-  60% {
-    transform: translate3d(3%, 0, 0);
-  }
-  83% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    margin-bottom: 15px;
-  }
-}
-@-moz-keyframes slide-out {
-  0% {
-    transform: translate3d(0, 0, 0);
-    margin-bottom: 15px;
-  }
-  23% {
-    transform: translate3d(3%, 0, 0);
-  }
-  83% {
-    transform: translate3d(-100%, 0, 0);
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0);
-    margin-bottom: -97px;
-  }
-}
-@-webkit-keyframes slide-out {
-  0% {
-    transform: translate3d(0, 0, 0);
-    margin-bottom: 15px;
-  }
-  23% {
-    transform: translate3d(3%, 0, 0);
-  }
-  83% {
-    transform: translate3d(-100%, 0, 0);
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0);
-    margin-bottom: -97px;
-  }
-}
-@-o-keyframes slide-out {
-  0% {
-    transform: translate3d(0, 0, 0);
-    margin-bottom: 15px;
-  }
-  23% {
-    transform: translate3d(3%, 0, 0);
-  }
-  83% {
-    transform: translate3d(-100%, 0, 0);
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0);
-    margin-bottom: -97px;
-  }
-}
-@keyframes slide-out {
-  0% {
-    transform: translate3d(0, 0, 0);
-    margin-bottom: 15px;
-  }
-  23% {
-    transform: translate3d(3%, 0, 0);
-  }
-  83% {
-    transform: translate3d(-100%, 0, 0);
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0);
-    margin-bottom: -97px;
+  to {
+    opacity: 1;
   }
 }

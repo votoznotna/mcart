@@ -28,6 +28,7 @@
 
         $scope.filterUpdate = function(){
             messaging.publish(events.message._SERVER_REQUEST_STARTED_);
+            $scope.toggle = false;
             $scope.removeProducts();
             $scope.$safeApply();
             $scope.$$postDigest(function(){

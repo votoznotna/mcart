@@ -4,7 +4,7 @@
         <div class="panel-body">
             <ul class="flexList">
             <!--<li class="flexListItem item col-sm-6 col-md-4 col-lg-3" ng-repeat="item in products | orderBy:sortByPrice">-->
-                <li class="flexListItem item col-sm-6 col-md-4 col-lg-3" repeater item-name="item" source="products">
+                <li class="flexListItem col-sm-6 col-md-4 col-lg-3" repeater item-name="item" source="products">
                         <div class="thumbnail">
                             <a ui-sref="productDetail({productId: item.id})">
                                 <h4>{{item.name}}</h4>
