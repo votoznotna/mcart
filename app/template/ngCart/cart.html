@@ -19,7 +19,9 @@
         <tbody>
         <tr ng-repeat="item in ngCart.getCart().items track by $index">
             <td><span ng-click="itemId = item.getId(); ngCart.removeItemById(itemId)" class="glyphicon glyphicon-remove"></span></td>
-            <td class="width100pcnt okbreak">{{ item.getName() }}</td>
+
+
+            <td class="width100pcnt okbreak"><a class="nounderline" ui-sref="productDetail({productId: item.getId()})">{{ item.getName() }}</a></td>
             <td><span class="glyphicon glyphicon-minus" ng-class="{'disabled':item.getQuantity()==1,'default-cursor':item.getQuantity()==1}"
                       ng-click="item.setQuantity(-1, true)"></span></td><td><span class="pull-right">
                 {{ item.getQuantity() | number }}</span></td>
