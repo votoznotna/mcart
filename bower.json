@@ -34,6 +34,7 @@
     "rainbow": "~1.1.9",
     "ng-device-detector": "~1.1.7",
     "re-tree": "~0.0.2",
-    "angular-safeapply": "~1.0.4"
+    "angular-safeapply": "~1.0.4",
+    "bootstrap-stylus": "~4.0.5"
   }
 }

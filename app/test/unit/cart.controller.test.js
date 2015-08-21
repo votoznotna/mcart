@@ -100,10 +100,10 @@
 
             expect(scope.$on).toHaveBeenCalled();
 
-            expect(tdParent.text().trim()).toBe("2");
+            expect(tdParent.next().text().trim()).toBe("2");
             element.find("span.glyphicon-minus").eq(0).click();
             expect(ngCart.getTotalItems()).toEqual(1);
-            expect(tdParent.text().trim()).toBe("1");
+            expect(tdParent.next().text().trim()).toBe("1");
             expect(scope.$on).toHaveBeenCalled();
 
 /*            runs(function() {

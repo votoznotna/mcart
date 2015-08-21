@@ -11,6 +11,7 @@
         var ProductListCtrl,
             scope,
             rootScope,
+            timeout,
             $httpBackend,
             $stateParams,
             $location;
@@ -32,18 +33,18 @@
         // Then we can start by loading the main application module
         beforeEach(module("shoppingCart"));
 
+
         //beforeEach(inject(function($urlRouterProvider) { $urlRouterProvider.deferIntercept(); }));
 
-        beforeEach(inject(function($controller, _$rootScope_, _$location_, _$stateParams_, _$httpBackend_) {
+        beforeEach(inject(function($controller, _$rootScope_, _$location_, _$stateParams_, _$httpBackend_, _$timeout_) {
             // Set a new global scope
             scope = _$rootScope_.$new();
             rootScope =  _$rootScope_;
-
+            timeout = _$timeout_;
             // Point global variables to injected services
             $stateParams = _$stateParams_;
             $httpBackend = _$httpBackend_;
             $location = _$location_;
-
             // Initialize the controller.
             ProductListCtrl = $controller('ProductListCtrl', {
                 $scope: scope
@@ -56,7 +57,6 @@
         });
 
         it('controller run should create an array with at least one product object fetched from XHR', inject(function(productResource) {
-
 
             var sampleProduct = new productResource({
                 "id": 6,
@@ -77,7 +77,7 @@
             $httpBackend.flush();
 
             // Test scope value
-            expect(scope.products).toEqualData(sampleProducts);
+            expect(scope.initProducts).toEqualData(sampleProducts);
         }));
     });
 }());

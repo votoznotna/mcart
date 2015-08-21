@@ -14,9 +14,12 @@ module.exports = function(config) {
 		// list of files / patterns to load in the browser
 		files: [
 			'dist/vendor/vendor.js',
+			'app/bower_components/ngcart/dist/ngCart.js',
 			'app/app.js',
+			'app/dev.js',
 			'app/common/services/*.js',
 			'app/common/directives/*.js',
+			'app/common/filters/*.js',
 			'app/partials/**/*.js',
 			'app/test/unit/**/*.js',
 			'app/template/**/*.html'
